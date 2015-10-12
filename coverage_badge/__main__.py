@@ -8,7 +8,10 @@ import os
 import sys
 import argparse
 import pkg_resources
-import coverage
+try:
+    import coverage
+except ImportError:
+    coverage = None
 
 
 class Devnull(object):
@@ -79,6 +82,11 @@ def save_badge(badge, filepath):
 
 if __name__ == '__main__':
     args = parse_args()
+
+    # Check for coverage
+    if coverage is None:
+        print('Error: Python coverage module not installed.')
+        sys.exit(1)
 
     # Generate badge
     total = get_total()
