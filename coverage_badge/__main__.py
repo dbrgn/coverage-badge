@@ -41,7 +41,7 @@ def get_badge(total):
     string.
     """
     template_path = os.path.join('templates', 'flat.svg')
-    template = pkg_resources.resource_string(__name__, template_path)
+    template = pkg_resources.resource_string(__name__, template_path).decode('utf8')
     return template.replace('{{ total }}', total)
 
 
