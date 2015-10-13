@@ -45,7 +45,7 @@ def get_badge(total):
     return template.replace('{{ total }}', total)
 
 
-def parse_args():
+def parse_args(argv):
     """
     Parse the command line arguments.
     """
@@ -56,7 +56,7 @@ def parse_args():
             help='Don\'t output any non-error messages.')
     parser.add_argument('-v', dest='print_version', action='store_true',
             help='Show version.')
-    return parser.parse_args()
+    return parser.parse_args(argv)
 
 
 def save_badge(badge, filepath):
@@ -85,11 +85,11 @@ def save_badge(badge, filepath):
     return path
 
 
-def main():
+def main(argv):
     """
     Console scripts entry point.
     """
-    args = parse_args()
+    args = parse_args(argv)
 
     # Print version
     if args.print_version:
@@ -115,8 +115,8 @@ def main():
         if not args.quiet:
             print('Saved badge to {}'.format(path))
     else:
-        print(badge)
+        print(badge, end='')
 
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1:])
