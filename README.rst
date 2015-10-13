@@ -3,6 +3,11 @@ Coverage.py Badge
 
 A small script to generate coverage badges using Coverage.py.
 
+Example:
+
+.. image:: https://cdn.rawgit.com/dbrgn/coverage-badge/master/example.svg
+    :alt: Example coverage badge
+
 The badge template has been taken from shields.io_, therefore it should look
 mostly good. (The spec is a bit stricter on the margins, but I can't easily do
 text width calculations in Python so the margins might not always be 4px.)
