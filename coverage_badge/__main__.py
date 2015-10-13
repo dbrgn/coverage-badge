@@ -14,7 +14,7 @@ except ImportError:
     coverage = None
 
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 
 class Devnull(object):
