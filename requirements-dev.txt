@@ -1,0 +1,4 @@
+pytest==2.8.2
+pytest-cache==1.0
+pytest-cov==2.2.0
+pytest-pep8==1.0.6
