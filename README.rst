@@ -24,8 +24,8 @@ text width calculations in Python so the margins might not always be 4px.)
 Usage
 -----
 
-Change to a directory where coverage data (in the `.coverage` file) is
-available. If you don't have this file yet, you need to run coverage first.
+First, run Coverage.py to generate the necessary coverage data (the
+``.coverage`` file).
 
 Then you can either return the badge SVG to stdout::
 
