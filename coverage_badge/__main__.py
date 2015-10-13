@@ -14,6 +14,9 @@ except ImportError:
     coverage = None
 
 
+__version__ = '0.1.0'
+
+
 class Devnull(object):
     """
     A file like object that does nothing.
@@ -51,6 +54,8 @@ def parse_args():
             help='Save the file to the specified path.')
     parser.add_argument('-q', dest='quiet', action='store_true',
             help='Don\'t output any non-error messages.')
+    parser.add_argument('-v', dest='print_version', action='store_true',
+            help='Show version.')
     return parser.parse_args()
 
 
@@ -85,6 +90,11 @@ def main():
     Console scripts entry point.
     """
     args = parse_args()
+
+    # Print version
+    if args.print_version:
+        print('coverage-badge v{}'.format(__version__))
+        sys.exit(0)
 
     # Check for coverage
     if coverage is None:
