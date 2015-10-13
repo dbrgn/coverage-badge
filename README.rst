@@ -3,7 +3,7 @@ Coverage.py Badge
 
 A small script to generate coverage badges using Coverage.py.
 
-Example:
+Example of a generated badge:
 
 .. image:: https://cdn.rawgit.com/dbrgn/coverage-badge/master/example.svg
     :alt: Example coverage badge
