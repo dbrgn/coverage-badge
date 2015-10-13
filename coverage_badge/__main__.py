@@ -59,12 +59,12 @@ def save_badge(badge, filepath):
     Save badge to the specified path.
     """
     # Validate path (part 1)
-    if args.filepath.endswith('/'):
+    if filepath.endswith('/'):
         print('Error: Filepath may not be a directory.')
         sys.exit(1)
 
     # Get absolute filepath
-    path = os.path.abspath(args.filepath)
+    path = os.path.abspath(filepath)
     if not path.lower().endswith('.svg'):
         path += '.svg'
 
@@ -80,7 +80,10 @@ def save_badge(badge, filepath):
     return path
 
 
-if __name__ == '__main__':
+def main():
+    """
+    Console scripts entry point.
+    """
     args = parse_args()
 
     # Check for coverage
@@ -99,3 +102,7 @@ if __name__ == '__main__':
             print('Saved badge to {}'.format(path))
     else:
         print(badge)
+
+
+if __name__ == '__main__':
+    main()
