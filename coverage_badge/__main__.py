@@ -45,7 +45,7 @@ def get_badge(total):
     return template.replace('{{ total }}', total)
 
 
-def parse_args(argv):
+def parse_args(argv=None):
     """
     Parse the command line arguments.
     """
@@ -56,7 +56,14 @@ def parse_args(argv):
             help='Don\'t output any non-error messages.')
     parser.add_argument('-v', dest='print_version', action='store_true',
             help='Show version.')
-    return parser.parse_args(argv)
+
+    # If arguments have been passed in, use them.
+    if argv:
+        return parser.parse_args(argv)
+
+    # Otherwise, just use sys.argv directly.
+    else:
+        return parser.parse_args()
 
 
 def save_badge(badge, filepath):
@@ -85,7 +92,7 @@ def save_badge(badge, filepath):
     return path
 
 
-def main(argv):
+def main(argv=None):
     """
     Console scripts entry point.
     """
@@ -119,4 +126,4 @@ def main(argv):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main()
