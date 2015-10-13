@@ -24,10 +24,8 @@ text width calculations in Python so the margins might not always be 4px.)
 Usage
 -----
 
-First, run Coverage.py to generate the necessary coverage data (the
-``.coverage`` file).
-
-Then you can either return the badge SVG to stdout::
+First, run Coverage.py to generate the necessary coverage data. Then you can
+either return the badge SVG to stdout::
 
     $ coverage-badge
 
@@ -35,9 +33,14 @@ Then you can either return the badge SVG to stdout::
 
     $ coverage-badge -o coverage.svg
 
+It's important that you run ``coverage-badge`` from the directory where the
+``.coverage`` data file is located.
+
+---
+
 The full usage text::
 
-    usage: coverage_badge [-h] [-o FILEPATH] [-q]
+    usage: __main__.py [-h] [-o FILEPATH] [-q] [-v]
 
     Generate coverage badges for Coverage.py.
 
@@ -45,6 +48,7 @@ The full usage text::
       -h, --help   show this help message and exit
       -o FILEPATH  Save the file to the specified path.
       -q           Don't output any non-error messages.
+      -v           Show version.
 
 
 License
