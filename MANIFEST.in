@@ -1,1 +1,2 @@
 include README.rst LICENSE.txt AUTHORS.txt
+include coverage_badge/templates/*.svg
