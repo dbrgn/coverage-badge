@@ -1,9 +1,15 @@
 Coverage.py Badge
 ==================
 
-A small script to generate coverage badges using Coverage.py.
+.. image:: https://img.shields.io/travis/dbrgn/coverage-badge/master.svg
+    :alt: Build status
+    :target: https://travis-ci.org/dbrgn/coverage-badge
 
-Example of a generated badge:
+.. image:: https://img.shields.io/pypi/dm/coverage-badge.svg
+    :alt: PyPI Downloads
+    :target: https://pypi.python.org/pypi/coverage-badge
+
+A small script to generate coverage badges using Coverage.py. Example of a generated badge:
 
 .. image:: https://cdn.rawgit.com/dbrgn/coverage-badge/master/example.svg
     :alt: Example coverage badge
