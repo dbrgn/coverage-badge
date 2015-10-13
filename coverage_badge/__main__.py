@@ -92,7 +92,11 @@ def main():
         sys.exit(1)
 
     # Generate badge
-    total = get_total()
+    try:
+        total = get_total()
+    except coverage.misc.CoverageException as e:
+        print('Error: {} Did you run coverage first?'.format(e))
+        sys.exit(1)
     badge = get_badge(total)
 
     # Show or save output
