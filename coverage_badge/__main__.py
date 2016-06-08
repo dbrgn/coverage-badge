@@ -6,6 +6,7 @@ from __future__ import print_function, division, absolute_import, unicode_litera
 
 import os
 import sys
+import re
 import argparse
 import pkg_resources
 try:
@@ -35,6 +36,17 @@ def get_total():
     return '{0:.0f}'.format(total)
 
 
+def get_from_html(index_html):  # new
+    """
+    Return the total from index.html.
+    """
+    with open(index_html, "rb") as f:
+        html_content = f.read()
+    pattern = '<span class="pc_cov">(.*)%</span>'
+    pct = re.findall(pattern, html_content)[0]
+    return pct
+
+
 def get_badge(total):
     """
     Read the SVG template from the package, update total, return SVG as a
@@ -52,6 +64,8 @@ def parse_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('-o', dest='filepath',
             help='Save the file to the specified path.')
+    parser.add_argument('-n', '--html', dest='html',                    # new
+            help='Get coverage from index.html output by nosetests.')   # new
     parser.add_argument('-q', dest='quiet', action='store_true',
             help='Don\'t output any non-error messages.')
     parser.add_argument('-v', dest='print_version', action='store_true',
@@ -110,7 +124,10 @@ def main(argv=None):
 
     # Generate badge
     try:
-        total = get_total()
+        if args.html and os.path.exists(args.html):     # new
+            total = get_from_html(args.html)            # new
+        else:                                           # new
+            total = get_total()                         # moved
     except coverage.misc.CoverageException as e:
         print('Error: {} Did you run coverage first?'.format(e))
         sys.exit(1)

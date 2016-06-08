@@ -40,13 +40,14 @@ It's important that you run ``coverage-badge`` from the directory where the
 
 The full usage text::
 
-    usage: __main__.py [-h] [-o FILEPATH] [-q] [-v]
+    usage: __main__.py [-h] [-o FILEPATH] [-g HTML] [-q] [-v]
 
     Generate coverage badges for Coverage.py.
 
     optional arguments:
       -h, --help   show this help message and exit
       -o FILEPATH  Save the file to the specified path.
+      -n, --html HTML  Get coverage from index.html output by nosetests.
       -q           Don't output any non-error messages.
       -v           Show version.
 
