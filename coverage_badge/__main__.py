@@ -86,6 +86,8 @@ def parse_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('-o', dest='filepath',
             help='Save the file to the specified path.')
+    parser.add_argument('-f', dest='force', action='store_true',
+            help='Force overwrite image, use with -o key.')
     parser.add_argument('-q', dest='quiet', action='store_true',
             help='Don\'t output any non-error messages.')
     parser.add_argument('-v', dest='print_version', action='store_true',
@@ -100,7 +102,7 @@ def parse_args(argv=None):
         return parser.parse_args()
 
 
-def save_badge(badge, filepath):
+def save_badge(badge, filepath, force=False):
     """
     Save badge to the specified path.
     """
@@ -115,7 +117,7 @@ def save_badge(badge, filepath):
         path += '.svg'
 
     # Validate path (part 2)
-    if os.path.exists(path):
+    if not force and os.path.exists(path):
         print('Error: "{}" already exists.'.format(path))
         sys.exit(1)
 
@@ -152,7 +154,7 @@ def main(argv=None):
 
     # Show or save output
     if args.filepath:
-        path = save_badge(badge, args.filepath)
+        path = save_badge(badge, args.filepath, args.force)
         if not args.quiet:
             print('Saved badge to {}'.format(path))
     else:
