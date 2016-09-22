@@ -17,6 +17,25 @@ except ImportError:
 __version__ = '0.1.2'
 
 
+COLORS = {
+    'brightgreen': '#4c1',
+    'green': '#97CA00',
+    'yellowgreen': '#a4a61d',
+    'yellow': '#dfb317',
+    'orange': '#fe7d37',
+    'red': '#e05d44'
+}
+
+COLOR_RANGES [
+    (95, 'brightgreen'),
+    (90, 'green'),
+    (75, 'yellowgreen'),
+    (60, 'yellow'),
+    (40, 'orange'),
+    (0, 'red'),
+]
+
+
 class Devnull(object):
     """
     A file like object that does nothing.
@@ -35,6 +54,14 @@ def get_total():
     return '{0:.0f}'.format(total)
 
 
+def get_color(total):
+    """
+    Return color for current coverage precent
+    """
+    for range_, color in COLOR_RANGES:
+        if total >= range_:
+            return COLOR[color]
+
 def get_badge(total):
     """
     Read the SVG template from the package, update total, return SVG as a
@@ -42,7 +69,8 @@ def get_badge(total):
     """
     template_path = os.path.join('templates', 'flat.svg')
     template = pkg_resources.resource_string(__name__, template_path).decode('utf8')
-    return template.replace('{{ total }}', total)
+    color = get_color(total)
+    return template.replace('{{ total }}', total).replace('{{ color }}', color)
 
 
 def parse_args(argv=None):
