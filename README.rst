@@ -36,6 +36,26 @@ either return the badge SVG to stdout::
 It's important that you run ``coverage-badge`` from the directory where the
 ``.coverage`` data file is located.
 
+Different colors for cover ranges:
+
+.. image:: ./media/15.svg
+    :alt: 15%
+
+.. image:: ./media/45.svg
+    :alt: 45%
+
+.. image:: ./media/65.svg
+    :alt: 65%
+
+.. image:: ./media/80.svg
+    :alt: 80%
+
+.. image:: ./media/93.svg
+    :alt: 93%
+
+.. image:: ./media/97.svg
+    :alt: 97%
+
 ---
 
 The full usage text::
