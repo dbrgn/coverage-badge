@@ -67,6 +67,7 @@ The full usage text::
     optional arguments:
       -h, --help   show this help message and exit
       -o FILEPATH  Save the file to the specified path.
+      -f           Force overwrite image, use with -o key.
       -q           Don't output any non-error messages.
       -v           Show version.
 
