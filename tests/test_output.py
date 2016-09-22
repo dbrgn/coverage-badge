@@ -38,3 +38,18 @@ def test_svg_output(cb, capsys):
     assert out.startswith('<svg xmlns="http://www.w3.org/2000/svg" width="99" height="20">')
     assert '<text x="80" y="14">79%</text>' in out
     assert out.endswith('</svg>\n')
+
+
+def test_color_ranges(cb, capsys):
+    """
+    Test color total value
+    """
+    for total, color in (('97', '#4c1'), ('93', '#97CA00'), ('80', '#a4a61d'), ('65', '#dfb317'),
+            ('45', '#fe7d37'), ('15', '#e05d44'), ('n/a', '#9f9f9f')):
+        __main__.get_total = lambda: total
+        cb.main([])
+        out, _ = capsys.readouterr()
+        row = '<path fill="%s" d="M63 0h36v20H63z"/>' % color
+        assert out.startswith('<svg xmlns="http://www.w3.org/2000/svg" width="99" height="20">')
+        assert row in out
+        assert out.endswith('</svg>\n')

@@ -23,10 +23,11 @@ COLORS = {
     'yellowgreen': '#a4a61d',
     'yellow': '#dfb317',
     'orange': '#fe7d37',
-    'red': '#e05d44'
+    'red': '#e05d44',
+    'lightgrey': '#9f9f9f',
 }
 
-COLOR_RANGES [
+COLOR_RANGES = [
     (95, 'brightgreen'),
     (90, 'green'),
     (75, 'yellowgreen'),
@@ -58,9 +59,14 @@ def get_color(total):
     """
     Return color for current coverage precent
     """
+    try:
+        xtotal = int(total)
+    except ValueError:
+        return COLORS['lightgrey']
     for range_, color in COLOR_RANGES:
-        if total >= range_:
-            return COLOR[color]
+        if xtotal >= range_:
+            return COLORS[color]
+
 
 def get_badge(total):
     """
