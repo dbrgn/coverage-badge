@@ -60,7 +60,7 @@ Different colors for cover ranges:
 
 The full usage text::
 
-    usage: __main__.py [-h] [-o FILEPATH] [-q] [-v]
+    usage: __main__.py [-h] [-o FILEPATH] [-f] [-q] [-v]
 
     Generate coverage badges for Coverage.py.
 
