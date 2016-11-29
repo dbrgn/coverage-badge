@@ -35,7 +35,8 @@ def test_svg_output(cb, capsys):
     """
     cb.main([])
     out, _ = capsys.readouterr()
-    assert out.startswith('<svg xmlns="http://www.w3.org/2000/svg" width="99" height="20">')
+    assert out.startswith('<?xml version="1.0" encoding="UTF-8"?>')
+    assert '<svg xmlns="http://www.w3.org/2000/svg" width="99" height="20">' in out
     assert '<text x="80" y="14">79%</text>' in out
     assert out.endswith('</svg>\n')
 
