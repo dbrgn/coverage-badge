@@ -87,7 +87,7 @@ def parse_args(argv=None):
     parser.add_argument('-o', dest='filepath',
             help='Save the file to the specified path.')
     parser.add_argument('-p', dest='plain_color', action='store_true',
-            help='Standard green badge.')
+            help='Plain color mode. Standard green badge.')
     parser.add_argument('-f', dest='force', action='store_true',
             help='Force overwrite image, use with -o key.')
     parser.add_argument('-q', dest='quiet', action='store_true',

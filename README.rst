@@ -60,17 +60,17 @@ Different colors for cover ranges:
 
 The full usage text::
 
-    usage: __main__.py [-h] [-o FILEPATH] [-f] [-q] [-v]
+    usage: __main__.py [-h] [-o FILEPATH] [-p] [-f] [-q] [-v]
 
     Generate coverage badges for Coverage.py.
 
     optional arguments:
       -h, --help   show this help message and exit
       -o FILEPATH  Save the file to the specified path.
+      -p           Plain color mode. Standard green badge.
       -f           Force overwrite image, use with -o key.
       -q           Don't output any non-error messages.
       -v           Show version.
-
 
 License
 -------
