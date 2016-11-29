@@ -86,6 +86,8 @@ def parse_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('-o', dest='filepath',
             help='Save the file to the specified path.')
+    parser.add_argument('-p', dest='plain_color', action='store_true',
+            help='Standard green badge.')
     parser.add_argument('-f', dest='force', action='store_true',
             help='Force overwrite image, use with -o key.')
     parser.add_argument('-q', dest='quiet', action='store_true',
@@ -152,7 +154,7 @@ def main(argv=None):
         sys.exit(1)
 
     color = DEFAULT_COLOR if args.plain_color else get_color(total)
-    badge = get_badge(total)
+    badge = get_badge(total, color)
 
     # Show or save output
     if args.filepath:
