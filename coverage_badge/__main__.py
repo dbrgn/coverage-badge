@@ -14,7 +14,7 @@ except ImportError:
     coverage = None
 
 
-__version__ = '0.1.2'
+__version__ = '0.2.0'
 
 
 DEFAULT_COLOR = '#a4a61d'
