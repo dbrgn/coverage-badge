@@ -36,20 +36,41 @@ either return the badge SVG to stdout::
 It's important that you run ``coverage-badge`` from the directory where the
 ``.coverage`` data file is located.
 
+Different colors for cover ranges:
+
+.. image:: https://cdn.rawgit.com/samael500/coverage-badge/master/media/15.svg
+    :alt: 15%
+
+.. image:: https://cdn.rawgit.com/samael500/coverage-badge/master/media/45.svg
+    :alt: 45%
+
+.. image:: https://cdn.rawgit.com/samael500/coverage-badge/master/media/65.svg
+    :alt: 65%
+
+.. image:: https://cdn.rawgit.com/samael500/coverage-badge/master/media/80.svg
+    :alt: 80%
+
+.. image:: https://cdn.rawgit.com/samael500/coverage-badge/master/media/93.svg
+    :alt: 93%
+
+.. image:: https://cdn.rawgit.com/samael500/coverage-badge/master/media/97.svg
+    :alt: 97%
+
 ---
 
 The full usage text::
 
-    usage: __main__.py [-h] [-o FILEPATH] [-q] [-v]
+    usage: __main__.py [-h] [-o FILEPATH] [-p] [-f] [-q] [-v]
 
     Generate coverage badges for Coverage.py.
 
     optional arguments:
       -h, --help   show this help message and exit
       -o FILEPATH  Save the file to the specified path.
+      -p           Plain color mode. Standard green badge.
+      -f           Force overwrite image, use with -o key.
       -q           Don't output any non-error messages.
       -v           Show version.
-
 
 License
 -------
