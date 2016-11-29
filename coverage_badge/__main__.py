@@ -17,6 +17,7 @@ except ImportError:
 __version__ = '0.1.2'
 
 
+DEFAULT_COLOR = '#a4a61d'
 COLORS = {
     'brightgreen': '#4c1',
     'green': '#97CA00',
@@ -68,14 +69,13 @@ def get_color(total):
             return COLORS[color]
 
 
-def get_badge(total):
+def get_badge(total, color=DEFAULT_COLOR):
     """
     Read the SVG template from the package, update total, return SVG as a
     string.
     """
     template_path = os.path.join('templates', 'flat.svg')
     template = pkg_resources.resource_string(__name__, template_path).decode('utf8')
-    color = get_color(total)
     return template.replace('{{ total }}', total).replace('{{ color }}', color)
 
 
@@ -150,6 +150,8 @@ def main(argv=None):
     except coverage.misc.CoverageException as e:
         print('Error: {} Did you run coverage first?'.format(e))
         sys.exit(1)
+
+    color = DEFAULT_COLOR if args.plain_color else get_color(total)
     badge = get_badge(total)
 
     # Show or save output
