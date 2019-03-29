@@ -53,7 +53,16 @@ def get_total():
     cov = coverage.Coverage()
     cov.load()
     total = cov.report(file=Devnull())
-    return '{0:.0f}'.format(total)
+
+    class Precision(coverage.results.Numbers):
+        def __init__(self, percent):
+            self.percent = percent
+
+        @property
+        def pc_covered(self):
+            return self.percent
+
+    return Precision(total).pc_covered_str
 
 
 def get_color(total):
