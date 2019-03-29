@@ -7,13 +7,13 @@ Used variables:
     export VERSION={VERSION}
     export GPG=3578F667F2F3A5FA
 
-Update version number in setup.py and CHANGELOG.md:
+Update version number:
 
-    vim -p setup.py coverage_badge/__main__.py CHANGELOG.md
+    vim -p setup.py coverage_badge/__main__.py
 
 Do a signed commit and signed tag of the release:
 
-    git add setup.py CHANGELOG.md
+    git add setup.py coverage_badge/__main__.py
     git commit -S${GPG} -m "Release v${VERSION}"
     git tag -u ${GPG} -m "Release v${VERSION}" v${VERSION}
 
