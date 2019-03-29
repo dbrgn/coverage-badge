@@ -51,14 +51,15 @@ class Precision(coverage.results.Numbers):
     A class for using the percentage rounding of the main coverage package,
     with any percentage.
 
-    _Precision.pc_covered_str is the string format of the percentage.
+    To get the string format of the percentage, use the ``pc_covered_str``
+    property.
+
     """
     def __init__(self, percent):
         self.percent = percent
 
     @property
     def pc_covered(self):
-        """overriding the percentage calculation of the parent class"""
         return self.percent
 
 
