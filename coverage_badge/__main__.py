@@ -46,6 +46,22 @@ class Devnull(object):
         pass
 
 
+class Precision(coverage.results.Numbers):
+    """
+    A class for using the percentage rounding of the main coverage package,
+    with any percentage.
+
+    _Precision.pc_covered_str is the string format of the percentage.
+    """
+    def __init__(self, percent):
+        self.percent = percent
+
+    @property
+    def pc_covered(self):
+        """overriding the percentage calculation of the parent class"""
+        return self.percent
+
+
 def get_total():
     """
     Return the rounded total as properly rounded string.
@@ -53,14 +69,6 @@ def get_total():
     cov = coverage.Coverage()
     cov.load()
     total = cov.report(file=Devnull())
-
-    class Precision(coverage.results.Numbers):
-        def __init__(self, percent):
-            self.percent = percent
-
-        @property
-        def pc_covered(self):
-            return self.percent
 
     return Precision(total).pc_covered_str
 
