@@ -1,2 +1,2 @@
-include README.rst LICENSE.txt AUTHORS.txt
+include README.rst LICENSE.txt
 include coverage_badge/templates/*.svg
