@@ -20,6 +20,14 @@ text width calculations in Python so the margins might not always be 4px.)
 
 .. _shields.io: http://shields.io/
 
+Installation
+------------
+Run:
+
+.. code-block::
+    
+    pip install coverage-badge
+
 
 Usage
 -----
@@ -56,7 +64,7 @@ Different colors for cover ranges:
 .. image:: https://cdn.rawgit.com/samael500/coverage-badge/master/media/97.svg
     :alt: 97%
 
----
+----
 
 The full usage text::
 
