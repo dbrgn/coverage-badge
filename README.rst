@@ -64,11 +64,9 @@ Different colors for cover ranges:
 .. image:: https://cdn.rawgit.com/samael500/coverage-badge/master/media/97.svg
     :alt: 97%
 
----
+----
 
-The full usage text
-
-.. code-block:: shell script
+The full usage text::
 
     usage: __main__.py [-h] [-o FILEPATH] [-p] [-f] [-q] [-v]
 
