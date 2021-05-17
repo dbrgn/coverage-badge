@@ -18,8 +18,9 @@ The badge template has been taken from shields.io_, therefore it should look
 mostly good. (The spec is a bit stricter on the margins, but I can't easily do
 text width calculations in Python so the margins might not always be 4px.)
 
-Note: If you need a script/library with a few more features (e.g. test badges,
-flake8 reports, etc), check out genbadge_.
+.. note::
+    Note: If you need a script/library with a few more features (e.g. test badges,
+    flake8 reports, etc), check out genbadge_.
 
 .. _shields.io: http://shields.io/
 .. _genbadge: https://smarie.github.io/python-genbadge/
