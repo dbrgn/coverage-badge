@@ -8,10 +8,8 @@ import os
 import sys
 import argparse
 import pkg_resources
-try:
-    import coverage
-except ImportError:
-    coverage = None
+
+import coverage
 
 
 __version__ = '1.0.1'
