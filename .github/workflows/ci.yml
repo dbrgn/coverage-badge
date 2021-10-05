@@ -1,0 +1,31 @@
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+name: CI
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python:
+          - '3.6'
+          - '3.7'
+          - '3.8'
+          - '3.9'
+          - 'pypy3'
+    name: Python ${{ matrix.python }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup python ${{ matrix.python }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install dependencies
+        run: pip install . && pip install -r requirements-dev.txt
+      - name: Run tests
+        run: python -m pytest
