@@ -1,6 +1,10 @@
 Coverage.py Badge
 ==================
 
+.. image:: https://github.com/dbrgn/coverage-badge/workflows/CI/badge.svg
+    :alt: Build status
+    :target: https://github.com/dbrgn/coverage-badge/actions?query=branch%3Amaster
+
 .. image:: https://img.shields.io/pypi/dm/coverage-badge.svg
     :alt: PyPI Downloads
     :target: https://pypi.python.org/pypi/coverage-badge
