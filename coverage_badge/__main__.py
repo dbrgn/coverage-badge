@@ -9,7 +9,7 @@ import pkg_resources
 import coverage
 
 
-__version__ = '1.0.1'
+__version__ = '1.0.2'
 
 
 DEFAULT_COLOR = '#a4a61d'
