@@ -48,24 +48,7 @@ def get_total():
     cov = coverage.Coverage()
     cov.load()
     total = cov.report(file=Devnull())
-
-    class Precision(coverage.results.Numbers):
-        """
-        A class for using the percentage rounding of the main coverage package,
-        with any percentage.
-
-        To get the string format of the percentage, use the ``pc_covered_str``
-        property.
-
-        """
-        def __init__(self, percent):
-            self.percent = percent
-
-        @property
-        def pc_covered(self):
-            return self.percent
-
-    return Precision(total).pc_covered_str
+    return coverage.results.Numbers().display_covered(total)
 
 
 def get_color(total):
