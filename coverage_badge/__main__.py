@@ -49,7 +49,7 @@ def get_total():
     cov.load()
     total = cov.report(file=Devnull())
 
-    if hasattr(coverage.results.Numbers, 'set_precision'):
+    if hasattr(coverage.results.Numbers, 'set_precision'):  # Coverage <= 5
         class Precision(coverage.results.Numbers):
             """
             A class for using the percentage rounding of the main coverage package,
@@ -67,7 +67,7 @@ def get_total():
                 return self.percent
 
         return Precision(total).pc_covered_str
-    else:
+    else:  # Coverage 6.x
         return coverage.results.Numbers(precision=cov.config.precision).display_covered(total)
 
 
