@@ -68,6 +68,11 @@ def get_total():
 
         return Precision(total).pc_covered_str
     else:  # Coverage 6.x
+        # NOTE: Precision is no longer set globally in the
+        # `coverage.results.Numbers` class. Instead the precision must be
+        # passed in as the first argument. We pull the precision from the
+        # `coverage.Coverage` object because it should pull the correct
+        # precision from the local .coveragerc file.
         return coverage.results.Numbers(precision=cov.config.precision).display_covered(total)
 
 
