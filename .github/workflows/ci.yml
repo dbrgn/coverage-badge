@@ -18,7 +18,10 @@ jobs:
           - '3.8'
           - '3.9'
           - 'pypy3'
-    name: Python ${{ matrix.python }}
+        coverage:
+          - '5.5'
+          - '6.0'
+    name: Python ${{ matrix.python }} on coverage ${{ matrix.coverage }}
     steps:
       - uses: actions/checkout@v2
       - name: Setup python ${{ matrix.python }}
@@ -26,6 +29,6 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - name: Install dependencies
-        run: pip install . && pip install -r requirements-dev.txt
+        run: pip install coverage==${{ matrix.coverage}} && pip install . && pip install -r requirements-dev.txt
       - name: Run tests
         run: python -m pytest
