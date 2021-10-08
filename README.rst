@@ -3,7 +3,7 @@ Coverage.py Badge
 
 .. image:: https://github.com/dbrgn/coverage-badge/workflows/CI/badge.svg
     :alt: Build status
-    :target: https://github.com/dbrgn/coverage-badge/actions?query=branch%3Amaster
+    :target: https://github.com/dbrgn/coverage-badge/actions?query=branch%3Amain
 
 .. image:: https://img.shields.io/pypi/dm/coverage-badge.svg
     :alt: PyPI Downloads
@@ -11,7 +11,7 @@ Coverage.py Badge
 
 A small script to generate coverage badges using Coverage.py. Example of a generated badge:
 
-.. image:: https://cdn.rawgit.com/dbrgn/coverage-badge/master/example.svg
+.. image:: https://cdn.rawgit.com/dbrgn/coverage-badge/main/example.svg
     :alt: Example coverage badge
 
 The badge template has been taken from shields.io_, therefore it should look
@@ -50,22 +50,22 @@ It's important that you run ``coverage-badge`` from the directory where the
 
 Different colors for cover ranges:
 
-.. image:: https://cdn.rawgit.com/samael500/coverage-badge/master/media/15.svg
+.. image:: https://cdn.rawgit.com/samael500/coverage-badge/main/media/15.svg
     :alt: 15%
 
-.. image:: https://cdn.rawgit.com/samael500/coverage-badge/master/media/45.svg
+.. image:: https://cdn.rawgit.com/samael500/coverage-badge/main/media/45.svg
     :alt: 45%
 
-.. image:: https://cdn.rawgit.com/samael500/coverage-badge/master/media/65.svg
+.. image:: https://cdn.rawgit.com/samael500/coverage-badge/main/media/65.svg
     :alt: 65%
 
-.. image:: https://cdn.rawgit.com/samael500/coverage-badge/master/media/80.svg
+.. image:: https://cdn.rawgit.com/samael500/coverage-badge/main/media/80.svg
     :alt: 80%
 
-.. image:: https://cdn.rawgit.com/samael500/coverage-badge/master/media/93.svg
+.. image:: https://cdn.rawgit.com/samael500/coverage-badge/main/media/93.svg
     :alt: 93%
 
-.. image:: https://cdn.rawgit.com/samael500/coverage-badge/master/media/97.svg
+.. image:: https://cdn.rawgit.com/samael500/coverage-badge/main/media/97.svg
     :alt: 97%
 
 ----
