@@ -1,2 +1,3 @@
 [report]
+include = coverage_badge/**
 omit = venv/*,VENV/*
