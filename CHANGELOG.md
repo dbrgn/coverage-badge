@@ -13,6 +13,15 @@ Possible log types:
 - `[chore]` for maintenance changes
 
 
+### v1.1.0 (2021-11-12)
+
+- [added] Compatibility with coverage.py 6.x (#17)
+
+Contributors to this version (thanks!):
+
+- [@didorothy](https://github.com/didorothy)
+
+
 ### v1.0.2 (2021-10-05)
 
 - [changed] Drop Python <=3.5 support
@@ -65,4 +74,4 @@ Contributors to this version (thanks!):
 
 ### v0.1.0 (2015-10-13)
 
-- [chore"Initial release
+- [chore] Initial release

@@ -3,7 +3,7 @@ from setuptools import setup
 readme = open('README.rst').read()
 
 setup(name='coverage-badge',
-      version='1.0.2',
+      version='1.1.0',
       description='Generate coverage badges for Coverage.py.',
       author='Danilo Bargen',
       author_email='mail@dbrgn.ch',
