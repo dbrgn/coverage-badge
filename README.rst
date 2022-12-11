@@ -50,22 +50,22 @@ It's important that you run ``coverage-badge`` from the directory where the
 
 Different colors for cover ranges:
 
-.. image:: https://cdn.rawgit.com/samael500/coverage-badge/main/media/15.svg
+.. image:: https://cdn.rawgit.com/dbrgn/coverage-badge/main/media/15.svg
     :alt: 15%
 
-.. image:: https://cdn.rawgit.com/samael500/coverage-badge/main/media/45.svg
+.. image:: https://cdn.rawgit.com/dbrgn/coverage-badge/main/media/45.svg
     :alt: 45%
 
-.. image:: https://cdn.rawgit.com/samael500/coverage-badge/main/media/65.svg
+.. image:: https://cdn.rawgit.com/dbrgn/coverage-badge/main/media/65.svg
     :alt: 65%
 
-.. image:: https://cdn.rawgit.com/samael500/coverage-badge/main/media/80.svg
+.. image:: https://cdn.rawgit.com/dbrgn/coverage-badge/main/media/80.svg
     :alt: 80%
 
-.. image:: https://cdn.rawgit.com/samael500/coverage-badge/main/media/93.svg
+.. image:: https://cdn.rawgit.com/dbrgn/coverage-badge/main/media/93.svg
     :alt: 93%
 
-.. image:: https://cdn.rawgit.com/samael500/coverage-badge/main/media/97.svg
+.. image:: https://cdn.rawgit.com/dbrgn/coverage-badge/main/media/97.svg
     :alt: 97%
 
 ----
