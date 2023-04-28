@@ -90,7 +90,7 @@ def get_color(total):
             return COLORS[color]
 
 
-def get_badge(total, color=DEFAULT_COLOR, name=DEFAULT_NAME):
+def get_badge(total, name, color=DEFAULT_COLOR):
     """
     Read the SVG template from the package, update total, return SVG as a
     string.
@@ -107,7 +107,7 @@ def parse_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('-o', dest='filepath',
             help='Save the file to the specified path.')
-    parser.add_argument('-n', dest='name',
+    parser.add_argument('-n', dest='name', default=DEFAULT_NAME,
             help='Specify a name next to the percentage.')
     parser.add_argument('-p', dest='plain_color', action='store_true',
             help='Plain color mode. Standard green badge.')
@@ -178,7 +178,7 @@ def main(argv=None):
 
     color = DEFAULT_COLOR if args.plain_color else get_color(total)
     name = args.name
-    badge = get_badge(total, color, name)
+    badge = get_badge(total, name, color)
 
     # Show or save output
     if args.filepath:
