@@ -74,3 +74,17 @@ def test_plain_color_mode(cb, capsys):
             <svg xmlns="http://www.w3.org/2000/svg" width="99" height="20">'''))
         assert row in out
         assert out.endswith('</svg>\n')
+        
+
+def test_name(cb, capsys):
+    """
+    Test the name.
+    """
+    cb.main(['-n', 'test coverage'])
+    out, _ = capsys.readouterr()
+    assert out.startswith(dedent('''\
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg xmlns="http://www.w3.org/2000/svg" width="99" height="20">'''))
+    assert '<text x="80" y="14">79%</text>' in out
+    assert '<text x="31.5" y="14">test coverage</text>' in out
+    assert out.endswith('</svg>\n')
