@@ -19,8 +19,8 @@ jobs:
           - '3.12'
           - 'pypy3.10'
         coverage:
-          - '5.5'
           - '6.0'
+          - '7.0'
     name: Python ${{ matrix.python }} on coverage ${{ matrix.coverage }}
     steps:
       - uses: actions/checkout@v4
