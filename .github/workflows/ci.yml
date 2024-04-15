@@ -29,6 +29,6 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - name: Install dependencies
-        run: pip install coverage==${{ matrix.coverage}} && pip install . && pip install -r requirements-dev.txt
+        run: pip install setuptools coverage==${{ matrix.coverage}} && pip install . && pip install -r requirements-dev.txt
       - name: Run tests
         run: python -m pytest
