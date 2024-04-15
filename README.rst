@@ -1,25 +1,29 @@
 Coverage.py Badge
 ==================
 
-.. image:: https://github.com/dbrgn/coverage-badge/workflows/CI/badge.svg
+.. |buildstatus| image:: https://github.com/dbrgn/coverage-badge/workflows/CI/badge.svg
     :alt: Build status
     :target: https://github.com/dbrgn/coverage-badge/actions?query=branch%3Amain
-
-.. image:: https://img.shields.io/pypi/dm/coverage-badge.svg
+.. |downloads| image:: https://img.shields.io/pypi/dm/coverage-badge.svg
     :alt: PyPI Downloads
     :target: https://pypi.python.org/pypi/coverage-badge
-
-A small script to generate coverage badges using Coverage.py. Example of a generated badge:
-
-.. image:: https://cdn.rawgit.com/dbrgn/coverage-badge/main/example.svg
+.. |example| image:: https://cdn.rawgit.com/dbrgn/coverage-badge/main/example.svg
     :alt: Example coverage badge
+
+|buildstatus| |downloads|
+
+   ⚠️ coverage-badge is in maintenance mode. I might still do occasional updates
+   and fixes from time to time, but there will be no added features. Most
+   people using coverage-badge might want to use genbadge_ instead, which has
+   more features (e.g. test badges, flake8 reports, etc).
+
+A small script to generate coverage badges using Coverage.py.
+
+Example of a generated badge: |example|
 
 The badge template has been taken from shields.io_, therefore it should look
 mostly good. (The spec is a bit stricter on the margins, but I can't easily do
 text width calculations in Python so the margins might not always be 4px.)
-
-**:arrow_right: Note:** If you need a script with a few more features
-(e.g. test badges, flake8 reports, etc), check out genbadge_.
 
 .. _shields.io: http://shields.io/
 .. _genbadge: https://smarie.github.io/python-genbadge/
