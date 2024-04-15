@@ -23,7 +23,7 @@ jobs:
           - '6.0'
     name: Python ${{ matrix.python }} on coverage ${{ matrix.coverage }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup python ${{ matrix.python }}
         uses: actions/setup-python@v5
         with:
