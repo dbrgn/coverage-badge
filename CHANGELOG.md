@@ -13,6 +13,18 @@ Possible log types:
 - `[chore]` for maintenance changes
 
 
+### v1.1.1 (2024-04-24)
+
+- [fixed] Fix compatibility with coverage 7.5 (#28, #29)
+- [changed] Drop Python <=3.8 support
+
+Contributors to this version (thanks!):
+
+- [@danielpodrazka](https://github.com/danielpodrazka)
+
+Note: This project is now in maintenance mode. See `README.md` for more details.
+
+
 ### v1.1.0 (2021-11-12)
 
 - [added] Compatibility with coverage.py 6.x (#17)
