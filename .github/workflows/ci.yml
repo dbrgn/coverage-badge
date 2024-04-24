@@ -33,3 +33,5 @@ jobs:
         run: pip install setuptools coverage==${{ matrix.coverage}} && pip install . && pip install -r requirements-dev.txt
       - name: Run tests
         run: python -m pytest
+      - name: Run coverage-badge on own test coverage
+        run: python -m coverage_badge
