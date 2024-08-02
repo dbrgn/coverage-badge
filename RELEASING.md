@@ -9,7 +9,7 @@ Used variables:
 
 Update version number:
 
-    vim -p setup.py coverage_badge/__main__.py
+    vim -p setup.py coverage_badge/__main__.py CHANGELOG.md
 
 Do a signed commit and signed tag of the release:
 

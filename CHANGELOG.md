@@ -13,6 +13,17 @@ Possible log types:
 - `[chore]` for maintenance changes
 
 
+### v1.1.2 (2024-08-03)
+
+- [changed] Include setuptools as dependency (#31)
+
+Contributors to this version (thanks!):
+
+- [@AdrienPensart](https://github.com/AdrienPensart)
+
+Note: This project is now in maintenance mode. See `README.md` for more details.
+
+
 ### v1.1.1 (2024-04-24)
 
 - [fixed] Fix compatibility with coverage 7.5 (#28, #29)
