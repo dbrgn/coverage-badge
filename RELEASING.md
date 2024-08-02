@@ -22,11 +22,6 @@ Build source and binary distributions:
     python3 setup.py sdist
     python3 setup.py bdist_wheel
 
-Sign files:
-
-    gpg --detach-sign -u ${GPG} -a dist/coverage-badge-${VERSION}.tar.gz
-    gpg --detach-sign -u ${GPG} -a dist/coverage_badge-${VERSION}-py2.py3-none-any.whl
-
 Upload package to PyPI:
 
     twine3 upload dist/coverage[-_]badge-${VERSION}*
