@@ -4,7 +4,7 @@ Generate coverage badges for Coverage.py.
 import os
 import sys
 import argparse
-import pkg_resources
+from importlib import resources
 
 import coverage
 
@@ -97,8 +97,12 @@ def get_badge(total, color=DEFAULT_COLOR):
     Read the SVG template from the package, update total, return SVG as a
     string.
     """
-    template_path = os.path.join('templates', 'flat.svg')
-    template = pkg_resources.resource_string(__name__, template_path).decode('utf8')
+    template = (
+        resources.files(__package__)
+        .joinpath("templates")
+        .joinpath("flat.svg")
+        .read_text(encoding="utf-8")
+    )
     return template.replace('{{ total }}', total).replace('{{ color }}', color)
 
 
